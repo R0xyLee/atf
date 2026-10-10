@@ -203,7 +203,7 @@ void bl31_early_platform_setup2(u_register_t arg0, u_register_t arg1,
 	bl32_image_ep_info.args.arg3 = BL32_FDT_OVERLAY_ADDR;
 #endif
 #endif
-	ret = imx_bl31_params_parse(arg0, IMX_NS_OCRAM_SIZE, IMX_NS_OCRAM_BASE,
+	ret = imx_bl31_params_parse(arg0, IMX_NS_OCRAM_BASE, IMX_NS_OCRAM_SIZE,
 				    &bl32_image_ep_info, &bl33_image_ep_info);
 	if (ret != 0) {
 		ret = imx_bl31_params_parse(arg0, IMX_TCM_BASE, IMX_TCM_SIZE,
